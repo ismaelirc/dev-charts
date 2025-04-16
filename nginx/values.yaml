@@ -1,0 +1,17 @@
+## @param replicacount
+replicaCount: 1
+image:
+  name: nginx
+  tag: 1.27.0
+
+containerPort:
+  http: 80
+
+## Setting for nginx service
+## @param port Port where the service is listening
+## @param targetPort Port where the container is listening
+service:
+  enabled: false
+  type: ClusterIP
+  port: 80
+  targetPort: 80
